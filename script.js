@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ── Cookie banner ─────────────────────────────────
-     Показываем через 1.5с, если пользователь ещё не принял.
+     Показываем через 1.5с, если пользователь еще не принял.
      Выбор сохраняется в localStorage и не показывается повторно.
      ─────────────────────────────────────────────────── */
   const cookieBanner  = document.getElementById('cookieBanner');
