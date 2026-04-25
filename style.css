@@ -405,8 +405,7 @@ ul   { list-style: none; }
   max-width: 420px;
   aspect-ratio: 3 / 4;
 
-  /* Реальное фото (если есть) + крем как запасной фон */
-  background: url('images/hero.jpg') center / cover no-repeat, var(--section);
+  background: var(--section);
   border-radius: var(--r-xl);
   display: flex;
   align-items: flex-end;
