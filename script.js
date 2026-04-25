@@ -166,6 +166,23 @@ document.addEventListener('DOMContentLoaded', () => {
   goTo(0, false);
 
 
+  /* ── Cookie banner ─────────────────────────────────
+     Показываем через 1.5с, если пользователь ещё не принял.
+     Выбор сохраняется в localStorage и не показывается повторно.
+     ─────────────────────────────────────────────────── */
+  const cookieBanner  = document.getElementById('cookieBanner');
+  const cookieAccept  = document.getElementById('cookieAccept');
+
+  if (cookieBanner && !localStorage.getItem('lovart_cookies_ok')) {
+    setTimeout(() => cookieBanner.classList.add('visible'), 1500);
+
+    cookieAccept.addEventListener('click', () => {
+      cookieBanner.classList.remove('visible');
+      localStorage.setItem('lovart_cookies_ok', '1');
+    });
+  }
+
+
   /* ── Плавный скролл по якорям ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
